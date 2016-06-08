@@ -24,7 +24,7 @@
         android:layout_below="@+id/LogoPic"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:background="@drawable/ProPicDummy"
+        android:background="@drawable/propicdummy"
         android:layout_marginBottom="15dp"
         android:clickable="true"
         android:onClick="openGallery" />

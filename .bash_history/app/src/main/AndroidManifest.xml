@@ -19,7 +19,7 @@
         </activity>
         <activity android:name=".UserRegisterActivity" />
         <activity android:name=".MerchantRegActivity" />
-        <activity android:name=".UserDetialsPage1"></activity>
+        <activity android:name=".UserDetialsPage1" />
     </application>
 
 </manifest>
