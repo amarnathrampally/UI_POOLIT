@@ -2,4 +2,7 @@
     <string name="app_name">Poolit</string>
     <string name="title_activity_cart_menu">CartMenu</string>
     <string name="title_activity_cart_field">CartField</string>
+    <string name="action_messages">Messages</string>
+    <string name="social_notifications">Notifications</string>
+    <string name="action_drawmenu">Menu</string>
 </resources>

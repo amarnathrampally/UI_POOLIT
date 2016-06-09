@@ -20,6 +20,7 @@
         <activity android:name=".UserRegisterActivity" />
         <activity android:name=".MerchantRegActivity" />
         <activity android:name=".UserDetialsPage1" />
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>
