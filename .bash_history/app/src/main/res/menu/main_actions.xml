@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
 
     <item android:id="@+id/action_messages"
         android:icon="@drawable/ic_action_chat"
         android:title="@string/action_messages"
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="ifRoom"
+        />
 
     <item android:id="@+id/social_notifications"
         android:icon="@drawable/ic_stat_social_notifications"

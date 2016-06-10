@@ -25,7 +25,6 @@ import collationsoftsolution.poolit.adapter.TabsPagerAdapter;
 import collationsoftsolution.poolit.R;
 
 
-
 public class MainActivity extends FragmentActivity implements ActionBar.TabListener {
 
     private ViewPager viewPager;
@@ -54,6 +53,8 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
         }
 
     }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

@@ -58,7 +58,7 @@ public class StartUpActivity extends AppCompatActivity implements View.OnClickLi
                 break;
 
             case R.id.regMerchant:
-                startActivity(new Intent(this, MainActivity.class));
+                startActivity(new Intent(this, MerchantRegActivity.class));
                 break;
 
         }
