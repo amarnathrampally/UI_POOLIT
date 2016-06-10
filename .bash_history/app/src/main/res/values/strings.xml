@@ -1,8 +1,16 @@
 <resources>
+
     <string name="app_name">Poolit</string>
     <string name="title_activity_cart_menu">CartMenu</string>
     <string name="title_activity_cart_field">CartField</string>
     <string name="action_messages">Messages</string>
     <string name="social_notifications">Notifications</string>
-    <string name="action_drawmenu">Menu</string>
+    <string name="action_Logout">Logout</string>
+    <string name="menu_account_info">Account Info</string>
+    <string name="menu_new_group">New Group</string>
+    <string name="menu_new_pool">New Pool</string>
+    <string name="menu_proofs_bankdetails">Upload Proofs and Bank details</string>
+    <string name="menu_settings_status">Settings &amp; Status</string>
+
+
 </resources>

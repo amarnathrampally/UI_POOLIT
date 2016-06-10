@@ -12,10 +12,29 @@
         android:title="@string/social_notifications"
         app:showAsAction="ifRoom"/>
 
-    <item android:id="@+id/action_drawmenu"
-        android:icon="@drawable/ic_stat_image_dehaze"
-        android:title="@string/action_drawmenu"
-        app:showAsAction="ifRoom"/>
+    <item android:id="@+id/Account_Info"
+        android:title="@string/menu_account_info"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/New_Group"
+        android:title="@string/menu_new_group"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/New_Pool"
+        android:title="@string/menu_new_pool"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/Bank_details"
+        android:title="@string/menu_proofs_bankdetails"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/Settings_status"
+        android:title="@string/menu_settings_status"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/action_Logout"
+        android:title="@string/action_Logout"
+        app:showAsAction="never"/>
 
 
 </menu>
