@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#000000"
+    tools:context="collationsoftsolution.poolit.UserDetialsPage1">
+
+    <ImageView
+        android:layout_width="350dp"
+        android:layout_height="120dp"
+        android:id="@+id/LogoPic"
+        android:src="@mipmap/ic_logo"
+        android:layout_marginBottom="10dp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/proPic"
+        android:layout_below="@+id/LogoPic"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/propicdummy"
+        android:layout_marginBottom="15dp"
+        android:clickable="true"
+        android:onClick="openGallery" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Male"
+        android:id="@+id/maleButton"
+        android:checked="true"
+        android:layout_below="@+id/proPic"
+        android:layout_centerHorizontal="true"
+        android:textColor="#d8de63"
+        android:clickable="false" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Female"
+        android:id="@+id/femaleButton"
+        android:checked="false"
+        android:layout_below="@+id/maleButton"
+        android:layout_alignLeft="@+id/maleButton"
+        android:layout_alignStart="@+id/maleButton"
+        android:textColor="#d8de63"
+        android:clickable="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Gender"
+        android:id="@+id/textView"
+        android:layout_alignBottom="@+id/maleButton"
+        android:layout_toLeftOf="@+id/maleButton"
+        android:layout_toStartOf="@+id/maleButton"
+        android:focusableInTouchMode="false"
+        android:textSize="25dp"
+        android:textColor="#d8de63" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:hint="City"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/femaleButton"
+        android:layout_centerHorizontal="true"
+        android:textSize="21dp"
+        android:padding="5dp"
+        android:paddingLeft="10dp"
+        android:background="#ffffff"
+        android:clickable="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SKIP"
+        android:id="@+id/skipButton"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="34dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:textSize="17dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:id="@+id/nextButton"
+        android:layout_alignBottom="@+id/skipButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:textSize="17dp" />
+
+
+</RelativeLayout>
