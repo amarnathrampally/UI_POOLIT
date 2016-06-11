@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.content.Intent;
 
 public class StartUpActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -33,7 +34,14 @@ public class StartUpActivity extends AppCompatActivity implements View.OnClickLi
         reg_as_merchant = (TextView) findViewById(R.id.regMerchant);
         login_button = (Button) findViewById(R.id.loginButton);
 
-        login_button.setOnClickListener(this);
+        login_button.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(StartUpActivity.this, MainActivity.class);
+                startActivity(i);
+            }
+        }
+        );
         forgot_pwd.setOnClickListener(this);
         reg_as_user.setOnClickListener(this);
         reg_as_merchant.setOnClickListener(this);
@@ -45,7 +53,9 @@ public class StartUpActivity extends AppCompatActivity implements View.OnClickLi
     public void onClick(View v) {
         switch(v.getId()){
             case R.id.loginButton:
-                   break;
+
+
+                break;
 
             case R.id.forgot_pwd:
                 break;

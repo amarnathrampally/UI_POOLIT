@@ -21,11 +21,12 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.widget.Toast;
 
+
 import collationsoftsolution.poolit.adapter.TabsPagerAdapter;
 import collationsoftsolution.poolit.R;
 
 
-public class MainActivity extends FragmentActivity implements ActionBar.TabListener {
+public class MainActivity extends AppCompatActivity {
 
     private ViewPager viewPager;
     private TabsPagerAdapter mAdapter;
@@ -38,19 +39,39 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        viewPager = (ViewPager) findViewById(R.id.pager);
-        actionBar = getActionBar();
-        mAdapter = new TabsPagerAdapter(getSupportFragmentManager());
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
-        viewPager.setAdapter(mAdapter);
-        actionBar.setHomeButtonEnabled(false);
-        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
+        tabLayout.addTab(tabLayout.newTab().setText("SHOP"));
+        tabLayout.addTab(tabLayout.newTab().setText("CHAT"));
+        tabLayout.addTab(tabLayout.newTab().setText("POOL"));
+        tabLayout.addTab(tabLayout.newTab().setText("CONTACTS"));
+        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
-        // Adding Tabs
-        for (String tab_name : tabs) {
-            actionBar.addTab(actionBar.newTab().setText(tab_name)
-                    .setTabListener((android.app.ActionBar.TabListener) this));
+        final ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
+        final TabsPagerAdapter adapter = new TabsPagerAdapter
+                (getSupportFragmentManager(), tabLayout.getTabCount());
+        if (viewPager != null) {
+            viewPager.setAdapter(adapter);
         }
+        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+        tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                viewPager.setCurrentItem(tab.getPosition());
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
 
     }
 
@@ -75,15 +96,14 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
                 return true;
             case R.id.Account_Info:
                 Toast.makeText(this, getString(R.string.menu_account_info),
-                        Toast.LENGTH_SHORT).show();
-                finish(); // close the activity
+                        Toast.LENGTH_SHORT).show();// close the activity
                 return true;
             case R.id.New_Group:
                 Toast.makeText(this, getString(R.string.social_notifications),
                         Toast.LENGTH_LONG).show();
                 return true;
             case R.id.New_Pool:
-                Toast.makeText(this, getString(R.string.social_notifications),
+                Toast.makeText(this, getString(R.string.menu_new_pool),
                         Toast.LENGTH_LONG).show();
                 return true;
             case R.id.Bank_details:
@@ -95,8 +115,9 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
                         Toast.LENGTH_LONG).show();
                 return true;
             case R.id.action_Logout:
-                Toast.makeText(this, getString(R.string.action_Logout),
+                Toast.makeText(this, "Succesfully Logged out",
                         Toast.LENGTH_LONG).show();
+                finish();
                 return true;
         }
         return false;
@@ -104,18 +125,4 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 
 
 
-    @Override
-    public void onTabSelected(ActionBar.Tab tab, FragmentTransaction ft) {
-        viewPager.setCurrentItem(tab.getPosition());
-    }
-
-    @Override
-    public void onTabUnselected(ActionBar.Tab tab, FragmentTransaction ft) {
-
-    }
-
-    @Override
-    public void onTabReselected(ActionBar.Tab tab, FragmentTransaction ft) {
-
-    }
 }

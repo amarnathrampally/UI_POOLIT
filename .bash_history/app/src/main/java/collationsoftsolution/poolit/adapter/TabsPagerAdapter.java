@@ -11,9 +11,12 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 public class TabsPagerAdapter extends FragmentPagerAdapter {
 
-    public TabsPagerAdapter(FragmentManager fm) {
+    public TabsPagerAdapter(FragmentManager fm, int tabCount) {
         super(fm);
     }
+
+
+
 
     @Override
     public Fragment getItem(int position) {
