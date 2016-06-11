@@ -45,10 +45,7 @@ public class StartUpActivity extends AppCompatActivity implements View.OnClickLi
     public void onClick(View v) {
         switch(v.getId()){
             case R.id.loginButton:
-
-
-
-                break;
+                   break;
 
             case R.id.forgot_pwd:
                 break;
@@ -61,6 +58,10 @@ public class StartUpActivity extends AppCompatActivity implements View.OnClickLi
                 startActivity(new Intent(this, MerchantRegActivity.class));
                 break;
 
+            default:
+                break;
+
         }
     }
+
 }

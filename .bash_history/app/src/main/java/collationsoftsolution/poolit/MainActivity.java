@@ -64,8 +64,44 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        return super.onOptionsItemSelected(item);
+        switch (item.getItemId()) {
+            case R.id.action_messages:
+                Toast.makeText(this, getString(R.string.action_messages),
+                        Toast.LENGTH_LONG).show();
+                return true;
+            case R.id.social_notifications:
+                Toast.makeText(this, getString(R.string.social_notifications),
+                        Toast.LENGTH_LONG).show();
+                return true;
+            case R.id.Account_Info:
+                Toast.makeText(this, getString(R.string.menu_account_info),
+                        Toast.LENGTH_SHORT).show();
+                finish(); // close the activity
+                return true;
+            case R.id.New_Group:
+                Toast.makeText(this, getString(R.string.social_notifications),
+                        Toast.LENGTH_LONG).show();
+                return true;
+            case R.id.New_Pool:
+                Toast.makeText(this, getString(R.string.social_notifications),
+                        Toast.LENGTH_LONG).show();
+                return true;
+            case R.id.Bank_details:
+                Toast.makeText(this, getString(R.string.menu_proofs_bankdetails),
+                        Toast.LENGTH_LONG).show();
+                return true;
+            case R.id.Settings_status:
+                Toast.makeText(this, getString(R.string.menu_settings_status),
+                        Toast.LENGTH_LONG).show();
+                return true;
+            case R.id.action_Logout:
+                Toast.makeText(this, getString(R.string.action_Logout),
+                        Toast.LENGTH_LONG).show();
+                return true;
+        }
+        return false;
     }
+
 
 
     @Override
