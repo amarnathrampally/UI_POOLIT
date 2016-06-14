@@ -3,16 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     >
 
+    <item android:id="@+id/actionbar_search"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:title="@string/actionbar_search"
+        app:showAsAction="always"
+        />
+
+
     <item android:id="@+id/action_messages"
         android:icon="@drawable/ic_action_chat"
         android:title="@string/action_messages"
-        app:showAsAction="ifRoom"
+        app:showAsAction="always"
         />
 
     <item android:id="@+id/social_notifications"
         android:icon="@drawable/ic_stat_social_notifications"
         android:title="@string/social_notifications"
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="always"/>
 
     <item android:id="@+id/Account_Info"
         android:title="@string/menu_account_info"

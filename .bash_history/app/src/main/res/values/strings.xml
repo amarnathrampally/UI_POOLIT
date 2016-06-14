@@ -11,6 +11,11 @@
     <string name="menu_new_pool">New Pool</string>
     <string name="menu_proofs_bankdetails">Upload Proofs and Bank details</string>
     <string name="menu_settings_status">Settings &amp; Status</string>
+    <string name="new_pool_create">Create</string>
+    <string name="create_pool">Create</string>
+    <string name="actionbar_search">Search Poolit</string>
+    <string name="menu_accc_info">Account Info</string>
+    <string name="acc_info_edit">Edit</string>
 
 
 </resources>

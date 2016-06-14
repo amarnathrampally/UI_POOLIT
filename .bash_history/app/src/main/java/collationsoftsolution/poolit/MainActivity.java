@@ -1,5 +1,6 @@
 package collationsoftsolution.poolit;
 
+import android.content.Intent;
 import android.support.v4.app.FragmentTransaction;
 import android.app.ActionBar.TabListener;
 import android.support.v7.app.AppCompatActivity;
@@ -24,6 +25,8 @@ import android.widget.Toast;
 
 import collationsoftsolution.poolit.adapter.TabsPagerAdapter;
 import collationsoftsolution.poolit.R;
+import collationsoftsolution.poolit.menuactions.NewGroup;
+import collationsoftsolution.poolit.menuactions.NewPool;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -32,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
     private TabsPagerAdapter mAdapter;
     private android.app.ActionBar actionBar;
 
-    private String[] tabs = { "Shop", "Chat", "Pool", "Contacts" };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,12 +101,12 @@ public class MainActivity extends AppCompatActivity {
                         Toast.LENGTH_SHORT).show();// close the activity
                 return true;
             case R.id.New_Group:
-                Toast.makeText(this, getString(R.string.social_notifications),
-                        Toast.LENGTH_LONG).show();
+                Intent ng = new Intent(MainActivity.this, NewGroup.class);
+                startActivity(ng);
                 return true;
             case R.id.New_Pool:
-                Toast.makeText(this, getString(R.string.menu_new_pool),
-                        Toast.LENGTH_LONG).show();
+                Intent np = new Intent(MainActivity.this, NewPool.class);
+                startActivity(np);
                 return true;
             case R.id.Bank_details:
                 Toast.makeText(this, getString(R.string.menu_proofs_bankdetails),
@@ -122,6 +124,7 @@ public class MainActivity extends AppCompatActivity {
         }
         return false;
     }
+
 
 
 

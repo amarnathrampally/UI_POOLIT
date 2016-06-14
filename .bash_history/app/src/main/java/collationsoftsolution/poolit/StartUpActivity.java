@@ -53,8 +53,6 @@ public class StartUpActivity extends AppCompatActivity implements View.OnClickLi
     public void onClick(View v) {
         switch(v.getId()){
             case R.id.loginButton:
-
-
                 break;
 
             case R.id.forgot_pwd:
