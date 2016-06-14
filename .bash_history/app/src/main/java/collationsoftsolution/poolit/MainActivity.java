@@ -1,30 +1,16 @@
 package collationsoftsolution.poolit;
 
 import android.content.Intent;
-import android.support.v4.app.FragmentTransaction;
-import android.app.ActionBar.TabListener;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.os.Build;
-import android.support.v7.app.ActionBar;
-import android.app.ActionBar.Tab;
 import android.support.design.widget.TabLayout;
-import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.widget.Toast;
 
-
 import collationsoftsolution.poolit.adapter.TabsPagerAdapter;
-import collationsoftsolution.poolit.R;
 import collationsoftsolution.poolit.menuactions.NewGroup;
 import collationsoftsolution.poolit.menuactions.NewPool;
 
@@ -117,8 +103,7 @@ public class MainActivity extends AppCompatActivity {
                         Toast.LENGTH_LONG).show();
                 return true;
             case R.id.action_Logout:
-                Toast.makeText(this, "Succesfully Logged out",
-                        Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Succesfully Logged out", Toast.LENGTH_LONG).show();
                 finish();
                 return true;
         }
