@@ -2,7 +2,6 @@ package collationsoftsolution.poolit.menuactions;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -11,15 +10,14 @@ import android.widget.Toast;
 
 import collationsoftsolution.poolit.R;
 
-public class AccountInfo extends AppCompatActivity   {
 
-    private ViewPager viewPager;
-    private android.app.ActionBar actionBar;
+public class NotificationsActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.new_pool_layout);
+        setContentView(R.layout.notification_layout);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -41,17 +39,17 @@ public class AccountInfo extends AppCompatActivity   {
                         Toast.LENGTH_LONG).show();
                 return true;
             case R.id.social_notifications:
-                Toast.makeText(this, getString(R.string.social_notifications),
-                        Toast.LENGTH_LONG).show();
                 return true;
             case R.id.Account_Info:
+                Intent ai = new Intent(NotificationsActivity.this, AccountInfo.class);
+                startActivity(ai);
                 return true;
             case R.id.New_Group:
-                Intent ng = new Intent(AccountInfo.this, NewGroup.class);
+                Intent ng = new Intent(NotificationsActivity.this, NewGroup.class);
                 startActivity(ng);
                 return true;
             case R.id.New_Pool:
-                Intent np = new Intent(AccountInfo.this, NewPool.class);
+                Intent np = new Intent(NotificationsActivity.this, NewPool.class);
                 startActivity(np);
                 return true;
             case R.id.Bank_details:

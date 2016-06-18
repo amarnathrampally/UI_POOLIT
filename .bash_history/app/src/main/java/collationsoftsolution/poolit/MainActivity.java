@@ -11,8 +11,10 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import collationsoftsolution.poolit.adapter.TabsPagerAdapter;
+import collationsoftsolution.poolit.menuactions.AccountInfo;
 import collationsoftsolution.poolit.menuactions.NewGroup;
 import collationsoftsolution.poolit.menuactions.NewPool;
+import collationsoftsolution.poolit.menuactions.UploadProofs;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -31,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
+        assert tabLayout != null;
         tabLayout.addTab(tabLayout.newTab().setText("SHOP"));
         tabLayout.addTab(tabLayout.newTab().setText("CHAT"));
         tabLayout.addTab(tabLayout.newTab().setText("POOL"));
@@ -43,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         if (viewPager != null) {
             viewPager.setAdapter(adapter);
         }
+        assert viewPager != null;
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -83,8 +87,8 @@ public class MainActivity extends AppCompatActivity {
                         Toast.LENGTH_LONG).show();
                 return true;
             case R.id.Account_Info:
-                Toast.makeText(this, getString(R.string.menu_account_info),
-                        Toast.LENGTH_SHORT).show();// close the activity
+                Intent ai = new Intent(MainActivity.this, AccountInfo.class);
+                startActivity(ai);
                 return true;
             case R.id.New_Group:
                 Intent ng = new Intent(MainActivity.this, NewGroup.class);
@@ -95,8 +99,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(np);
                 return true;
             case R.id.Bank_details:
-                Toast.makeText(this, getString(R.string.menu_proofs_bankdetails),
-                        Toast.LENGTH_LONG).show();
+                Intent up = new Intent(MainActivity.this, UploadProofs.class);
+                startActivity(up);
                 return true;
             case R.id.Settings_status:
                 Toast.makeText(this, getString(R.string.menu_settings_status),

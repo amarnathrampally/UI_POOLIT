@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:title="@string/menu_new_pool"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="?attr/colorPrimary"
+        android:elevation="6dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/upload_proof1"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_photo_camera_black_24dp"
+            android:layout_marginLeft="40dp"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upload"
+            android:id="@+id/bproof_1"
+            android:layout_marginLeft="30dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/upload_proof1"
+            android:padding="15dp"
+            android:background="#fef46004"
+            android:textSize="16dp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/upload_proof2"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_photo_camera_black_24dp"
+            android:layout_marginLeft="40dp"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upload"
+            android:id="@+id/bproof_2"
+            android:layout_marginLeft="30dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/upload_proof2"
+            android:padding="15dp"
+            android:background="#fef46004"
+            android:textSize="16dp" />
+
+
+    </RelativeLayout>
+
+    <EditText
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/new_pool_description"
+        android:layout_gravity="center_horizontal"
+        android:hint="Account Holder name"
+        android:padding="18dp"
+        android:layout_marginBottom="15dp"/>
+
+    <EditText
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/account_num"
+        android:hint="Account number"
+        android:padding="18dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="15dp"/>
+
+    <EditText
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/branch_name_text"
+        android:layout_gravity="center_horizontal"
+        android:hint="Bank name and Branch"
+        android:padding="18dp"
+        android:layout_marginBottom="15dp"/>
+
+    <EditText
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/nproof_ifsc"
+        android:hint="IFSC Code"
+        android:padding="18dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="15dp"/>
+
+</LinearLayout>

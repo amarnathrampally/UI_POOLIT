@@ -16,6 +16,8 @@
     <string name="actionbar_search">Search Poolit</string>
     <string name="menu_accc_info">Account Info</string>
     <string name="acc_info_edit">Edit</string>
+    <string name="no_contacts">No contacts in your contact list.</string>
+    <string name="Upload_id_proofs_menu">SAVE</string>
 
 
 </resources>

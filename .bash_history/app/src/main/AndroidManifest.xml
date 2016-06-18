@@ -28,6 +28,9 @@
         <activity android:name=".UserDetialsPage1" />
         <activity android:name=".menuactions.NewPool"/>
         <activity android:name=".menuactions.NewGroup"/>
+        <activity android:name=".menuactions.UploadProofs"/>
+        <activity android:name=".menuactions.AccountInfo"/>
+        <activity android:name=".menuactions.NotificationsActivity"/>
         <activity android:name=".MainActivity"></activity>
     </application>
 

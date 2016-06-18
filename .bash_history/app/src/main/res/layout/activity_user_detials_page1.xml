@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#000000"
+    android:background="#f5760a"
     tools:context="collationsoftsolution.poolit.UserDetialsPage1">
 
     <ImageView
@@ -37,7 +37,7 @@
         android:checked="true"
         android:layout_below="@+id/proPic"
         android:layout_centerHorizontal="true"
-        android:textColor="#d8de63"
+        android:textColor="#000000"
         android:clickable="false" />
 
     <RadioButton
@@ -49,7 +49,7 @@
         android:layout_below="@+id/maleButton"
         android:layout_alignLeft="@+id/maleButton"
         android:layout_alignStart="@+id/maleButton"
-        android:textColor="#d8de63"
+        android:textColor="#000000"
         android:clickable="false" />
 
     <TextView
@@ -63,7 +63,7 @@
         android:layout_toStartOf="@+id/maleButton"
         android:focusableInTouchMode="false"
         android:textSize="25dp"
-        android:textColor="#d8de63" />
+        android:textColor="#000000" />
 
     <TextView
         android:layout_width="match_parent"

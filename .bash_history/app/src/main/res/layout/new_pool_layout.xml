@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fef46004">
+    android:background="#ffffff">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
@@ -27,8 +27,7 @@
         android:id="@+id/scrollview"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        >
+        xmlns:android="http://schemas.android.com/apk/res/android">
 
       <LinearLayout
           xmlns:android="http://schemas.android.com/apk/res/android"
@@ -38,21 +37,20 @@
           android:layout_width="match_parent"
           android:layout_height="match_parent"
           android:padding="16dp"
-          android:background="#fef46004">
-
-
+          android:background="#ffffff">
 
 
        <ImageView
-        android:background="#ffffff"
         android:layout_width="160dp"
         android:layout_height="160dp"
         android:id="@+id/new_pool_image"
         android:layout_marginBottom="15dp"
-        android:layout_marginTop="0dp"/>
+        android:layout_marginTop="0dp"
+           android:src="@drawable/ic_newpool_icon"
+           android:layout_gravity="center_horizontal"/>
+
 
       <EditText
-        android:background="#ffffff"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/new_pool_title"
@@ -62,7 +60,6 @@
         android:layout_marginBottom="15dp"/>
 
     <EditText
-        android:background="#ffffff"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/new_pool_description"
@@ -72,7 +69,6 @@
         android:layout_marginBottom="15dp"/>
 
     <EditText
-        android:background="#ffffff"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="number"
@@ -84,7 +80,6 @@
         android:layout_marginBottom="15dp"/>
 
     <EditText
-        android:background="#ffffff"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="date"
@@ -96,7 +91,6 @@
         android:layout_marginBottom="15dp" />
 
     <EditText
-        android:background="#ffffff"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="number"
@@ -108,7 +102,6 @@
         android:layout_marginBottom="15dp"/>
 
     <EditText
-        android:background="#ffffff"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/new_addmem_group"
@@ -119,7 +112,6 @@
 
 
     <EditText
-        android:background="#ffffff"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/new_addmem_contacts"
